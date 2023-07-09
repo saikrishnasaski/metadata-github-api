@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: metadata-github-api
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            provider: github
+            clientId: ENC(FFp3ODTXTHKVQ9XP08knVOJSizXBxTU43fgMbVQXIMXipNCAR2Q7zSTJwt9Bfqf3M2wonuIHgCcYl6TP5aTEdQ==)
+            clientName: metadata-github-api
+            clientSecret: ENC(VND8ZI/2C//Egtj3XaJ/boJXgfJ7sFmS96tSgY11FhVFZkSX+8Qh3BLdDkUtzFS+pkegpMySXyXgTZrmex6LDi3ekixUpJXHFhOVCVIW1Nw=)
+            authorizationGrantType: authorization_code
+            redirectUri: http://localhost:8089/login/oauth2/code/github
+            scope:
+              - read
+              - write
+        provider:
+          github:
+            authorizationUri: https://github.com/login/oauth/authorize
+            tokenUri: https://github.com/login/oauth/access_token
+            userInfoUri: https://api.github.com/user
+            userNameAttribute: login
+
+app:
+  clientId: ENC(FFp3ODTXTHKVQ9XP08knVOJSizXBxTU43fgMbVQXIMXipNCAR2Q7zSTJwt9Bfqf3M2wonuIHgCcYl6TP5aTEdQ==)
+jasypt:
+  encryptor:
+    algorithm: PBEWITHSHA256AND256BITAES-CBC-BC
+    provider-class-name: org.bouncycastle.jce.provider.BouncyCastleProvider
+server:
+  port: 8089
