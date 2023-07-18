@@ -13,7 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>metadata-github-api</name>
 	<description>Demo project for Spring Boot</description>
-	<package>war</package>
+	<packaging>war</packaging>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
